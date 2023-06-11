@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
 * {
   margin: 0;
   padding: 0;
 }
-body{background-color: yellow;}
+
 /* header */
 header {
   background-color: white;
@@ -13,6 +15,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 /* logo */
 .logo {position: relative;
@@ -31,8 +34,7 @@ header {
  
   .menu ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+   
   
     font-family: 'Roboto', sans-serif;
   }
@@ -51,9 +53,101 @@ header {
     background-color:rgb(243,243,244);
    
   }
-  /* .menu a{text-decoration: none;
-    color: rgba(0, 0, 0, 0.673);
-    margin-left: 2em;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;} */
+  
+.contenedor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Opacidad del fondo */
+  z-index: 1;
+
+}
+
+.contenedor img {
+  filter: blur(5px) grayscale(1); /* Desenfoque */
+ width: 118em;
+ height: 100vh;
+
+}
+.contenido{position: absolute;
+  z-index: 2;
+  top: 17em;
+  left: 18em;}
+
+  .redes_sociales{display: flex;
+    justify-content: space-between;
+    width: 7.5em;
+  }
+    .boton-circulo {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: rgb(205,205,207); /* Color de fondo del botón */
+      color: rgb(47,52,58); /* Color del texto del botón */
+      border: none; /* Quitar borde del botón */
+      cursor: pointer;
+    }
+    
+  
+ 
+   h1{color: white;
+  font-size: 3em;
+margin-top: 1em;
+font-family: 'Montserrat', sans-serif;}
+  h2 {
+    font-family: 'Rubik', sans-serif;
+    margin-top: 0.6em;
+    position: relative;
+      color: white;
+      font-size: 37px;
+      border-right: 4px white;
+      border-left: 4px white;
+      border-top: 1px grey;
+      border-bottom: 1px grey;
+      border-style: solid;
+    width: 7em;
+    padding: 10px 46px 10px 13px;
+    
+  } h2:after {
+    content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-top-color: white;
+      border-bottom: 0;
+      border-left: 0;
+      margin-left: -116px;
+      margin-bottom: -17px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 16px solid white;
+  } 
+  
+  
+  .scroll button{background-color: tomato;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-top: 1.5em;
+  color: white;
+  font-size: 3em;
+  }
+  
+
+  
+  
+ 
+  
+  
+  
+  
+  
+  
